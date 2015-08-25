@@ -18,8 +18,8 @@ main ()
     import_certs
 
     cd src/berniesanders 
-    carthage bootstrap --verbose --platform ios
-    xcodebuild test -project berniesanders.xcodeproj/ -scheme berniesanders -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
+    carthage bootstrap --verbose --platform ios --no-use-binaries
+    xcodebuild clean build test -project berniesanders.xcodeproj/ -scheme berniesanders -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
 
     local status=$?
 
