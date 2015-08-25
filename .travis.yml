@@ -1,5 +1,5 @@
 language: objective-c
 osx_image: xcode6.4
 before_install:
-  - brew install carthage
+  - git clone https://github.com/Carthage/Carthage /tmp/Carthage && cd /tmp/carthage && make install
 script: script/cibuild
